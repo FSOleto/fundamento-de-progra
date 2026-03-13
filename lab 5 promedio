@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+  float p1,p2,p3;
+  float examen,proyecto;
+  float promedio;
+
+  printf("ingrese nota del primer laboratorio: ");
+  scanf("%f",&p1);
+  
+    printf("ingrese nota del segundo laboratorio: ");
+  scanf("%f",&p2);
+  
+    printf("ingrese nota del tercer laboratorio: ");
+  scanf("%f",&p3);
+  
+    printf("ingrese nota del Examen teorico: ");
+  scanf("%f",&examen);
+  
+    printf("ingrese nota del proyecto: ");
+  scanf("%f",&proyecto);
+  
+  promedio= (p1*0.15)+(p2*0.15)+(p3*0.15)+(examen*0.35)+(proyecto*0.20);
+  printf("\nEl Promedio final es: %.2f",promedio);
+  
+  
+
+    return 0;
+}
