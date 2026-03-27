@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+    cout << "Ingrese numero: ";
+    cin >> numero;
+    switch (numero) {
+        case 1:
+            cout << "Lunes - Dia laboral\n" ;
+            break;
+        case 2:
+            cout << "Martes - Dia laboral\n" ;
+            break;
+        case 3:
+            cout << "Miercoles - Dia laboral\n";
+            break;
+        case 4:
+            cout << "Jueves - Dia laboral\n" ;
+            break;
+        case 5:
+            cout << "Viernes - Dia laboral\n";
+            break;
+        case 6:
+            cout << "Sabado - Fin de semana\n";
+            break;
+        case 7:
+            cout << "Domingo - Fin de semana\n";
+            break;
+        default:
+            cout << "Error: El numero ingresado debe estar entre 1 y 7.\n";
+            break;
+    }
+
+    return 0;
+}
