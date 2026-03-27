@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ double nm1,nm2;
+ int opcion; 
+ 
+  cout<<"Ingrese dos numeros separados: ";
+  cin>>nm1 >> nm2;
+  
+  cout<<"----Elija El Tipo de Operacion---\n";
+  cout<<"1. Suma\n";
+  cout<<"2. Resta\n";
+  cout<<"3. Multiplicacion\n";
+  cout<<"4. Division\n";
+  cout<<"Seleccione Operacion: ";
+  cin>>opcion;
+  
+  switch(opcion){
+    case 1:
+    cout<<"Resultado:"<<(nm1 + nm2);
+    break;
+    case 2 :
+    cout<<"Resultado:"<<(nm1 - nm2);
+    break;
+    case 3 :
+    cout<<"Resultado:"<<(nm1 * nm2);
+    break;
+    case 4 :
+    cout<<"Resultado:"<<(nm1 / nm2);
+    break;
+  
+  default :
+  cout<<"Error: Opcion no valida. Seleccione un numero del 1 al 4."<<endl;
+  break;
+  }
+
+    return 0;
+}
