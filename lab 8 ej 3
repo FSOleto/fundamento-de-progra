@@ -1,0 +1,56 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int intentos = 0;
+    int pin;
+
+    while (intentos < 3) {
+        cout << "Ingrese su PIN: ";
+        cin >> pin;
+
+        int temp = pin;
+        int digitos = 0;
+        bool valido = true;
+
+        int anterior = -1;
+
+        while (temp > 0) {
+            int digito = temp % 10;
+            digitos++;
+
+            if (digito == anterior) {
+                valido = false; 
+            }
+
+            anterior = digito;
+            temp /= 10;
+        }
+
+        if (digitos != 4) {
+            valido = false;
+        }
+
+        if (valido) {
+            cout << "PIN valido" << endl;
+            return 0;
+        } else {
+            intentos++;
+            if (intentos < 3) {
+                cout << "PIN invalido. Intento " << intentos << " de 3." << endl;
+            }
+        }
+    }
+
+    cout << "Cuenta bloqueada" << endl;
+
+    return 0;
+}
