@@ -1,0 +1,44 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ long numero;
+  int suma_horas = 0;
+  int contadorapp = 0;
+  int app_5 = 0;
+  int digito;
+  
+ cout<<"---ANALISIS DE USO DE HORAS---"<<endl;
+ cout<<"INGRESE EL NUMERO DE REGISTRO:";
+ cin>>numero;
+ 
+ if(numero<=0){
+     cout<<"Error:ingrese numero positivo"<<endl;
+     
+ }
+  while(numero>0){
+    digito = numero % 10;
+    
+    suma_horas += digito;
+    
+    contadorapp++;
+    
+    if(digito>5){
+     app_5++;
+    }
+    numero = numero / 10 ;
+    
+  }
+   float promedio =suma_horas / contadorapp;
+   
+  cout<<"---RESULTADOS DEL ANALISIS---"<<endl;
+  cout<<"total de horas utilizadas: "<<suma_horas<<" horas"<<endl;
+  cout<<"App que superan las 5 horas: "<<app_5<<" aplicaciones"<<endl;
+  cout<<"Promedio de horas por aplicacion: "<<promedio<<" horas"<<endl;
+ 
+ 
+
+    return 0;
+}
